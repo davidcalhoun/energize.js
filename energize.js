@@ -13,7 +13,7 @@ var energize = (function(){
   };
   
   if(!energizable) {
-    // short-circuit it!  ("Input... need more input!")
+    // short-circuit it!  ('Input... need more input!')
     return {
       clk: function(elt, fn){
         on(elt, 'click', fn);
@@ -62,8 +62,9 @@ var energize = (function(){
       }
       
       // create and fire a click event
-      evt = document.createEvent("MouseEvents");
-      evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+			// https://developer.mozilla.org/en/DOM/event.initMouseEvent
+      evt = document.createEvent('MouseEvents');
+      evt.initMouseEvent('click', true, true, window, 0, touch.screenX, touch.screenY, touch.clientX, touch.clientY, false, false, false, false, 0, null);
       evt.simulated = true;   // distinguish this from a nonsimulated click
       focusedElt.dispatchEvent(evt);
       focusedElt = null;
