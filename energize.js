@@ -1,4 +1,4 @@
-// energize.js: speed up click events on mobile devices
+// energize.js: speed up click events on mobile devices (https://github.com/davidcalhoun/energize.js)
 (function() {
   // don't add to non-touch devices
   if(!('ontouchstart' in window)) return;
