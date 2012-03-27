@@ -1,5 +1,5 @@
-------------
 Why use energize?
+------------
 
 Touch devices sometimes add an artificial delay to click events, just to make sure the user isn't double-tapping to zoom.
 
