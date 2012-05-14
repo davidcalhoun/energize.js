@@ -13,16 +13,16 @@
     // setup the initial values
     // TODO: touch and hold
     this.startXY = [e.touches[0].clientX, e.touches[0].clientY];
-    this.treshold = false;
+    this.threshold = false;
   };
   var touchmove = function(e) {
     // check if the user is scrolling past the threshold
-    if(this.treshold) return false;  // noop if the threshold has already been reached
+    if(this.threshold) return false;  // noop if the threshold has already been reached
     this.threshold = isThresholdReached(this.startXY, [e.touches[0].clientX, e.touches[0].clientY]);
   };
   var touchend = function(e) {
     // don't fire a click if the user scrolled past the threshold
-    if(this.treshold || isThresholdReached(this.startXY, [e.changedTouches[0].clientX, e.changedTouches[0].clientY])) {
+    if(this.threshold || isThresholdReached(this.startXY, [e.changedTouches[0].clientX, e.changedTouches[0].clientY])) {
       return;
     }
     
