@@ -24,4 +24,4 @@ Why fire simulated click events?  Why not just tie into something like <a href="
 
 Because you have to add click events to EVERYTHING you want to speed up.  This will mean there will be potentially be some fast UI and some slow UI on your pages.  Ok, that's not so bad if you're using some form of abstraction for all click events (i.e. not using addEventListener directly).
 
-BUT interaction with native form elements such as buttons aren't sped up unless you manually add events to them.  Because of this, Energize takes the philosophy of listenening for clicks bubbling up to the top and handles them appropriately so you don't have to worry about them.
+BUT interaction with native form elements such as buttons aren't sped up unless you manually add events to them.  Because of this, Energize takes the philosophy of listening for clicks bubbling up to the top and handles them appropriately so you don't have to worry about them.
