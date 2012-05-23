@@ -5,7 +5,7 @@ Energize is a work in progress, but it's functional.  Bug reports, pull requests
 
 How do I use it?
 ------------
-Just include energize.js before any of your code that deals with click events (including any libraries and frameworks).  The reason is that energize.js fires simulated click events and also needs to suppress the "ghost click", the real click event that is fired later.
+Just include energize.js before any of your code that deals with click events (including any libraries and frameworks).  The reason is that energize.js fires simulated click events and also needs to suppress the "ghost click", the real click event that is fired later.  This is done via stopPropagation, which stops the the event from firing for other handlers listening for the click event.  Since handlers fire in the order they were added, energize.js needs to add its own click handler first.
 
 
 Why use energize?
