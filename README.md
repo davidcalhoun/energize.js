@@ -19,7 +19,7 @@ Why not just bind to ontouchend?
 Because the user might touch an element in order to scroll, which results in ontouchend firing at the end of the scroll event.  Do you want a click event to fire when the user was intending to scroll?
 
 
-Why fire simulated click events?  Why not just to into something like <a href="http://code.google.com/mobile/articles/fast_buttons.html">Fast Button</a>?
+Why fire simulated click events?  Why not just tie into something like <a href="http://code.google.com/mobile/articles/fast_buttons.html">Fast Button</a>?
 -------------
 
 Because you have to add click events to EVERYTHING you want to speed up.  This will mean there will be potentially be some fast UI and some slow UI on your pages.  Ok, that's not so bad if you're using some form of abstraction for all click events (i.e. not using addEventListener directly).
