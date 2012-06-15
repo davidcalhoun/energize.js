@@ -11,7 +11,7 @@ Just include energize.js before any of your code that deals with click events (i
 Why use energize?
 ------------
 
-Touch devices sometimes add an artificial delay to click events, just to make sure the user isn't double-tapping to zoom.
+Touch devices sometimes add an artificial delay to click events, just to make sure the user isn't double-tapping to zoom.  In the case where you don't mind disabling double-tap to zoom functionality (or in cases where you've disabled viewport zooming), there's no reason to preserve the click delay.  That's where energize.js comes in!
 
 Why not just bind to ontouchend?
 -------------
