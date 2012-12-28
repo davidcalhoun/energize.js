@@ -75,11 +75,11 @@
       window.location = target.getAttribute("href");
     }
 
-    // add an m-focus class to the targeted link (mimics :focus behavior)
+    // add an energize-focus class to the targeted link (mimics :focus behavior)
     if(!target || !target.classList) return;
-    target.classList.add("m-focus");
+    target.classList.add("energize-focus");
     window.setTimeout(function(){
-      target.classList.remove("m-focus");
+      target.classList.remove("energize-focus");
     }, 150);
   };
 
