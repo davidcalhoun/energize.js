@@ -71,7 +71,7 @@
        Special logic for standalone web apps
        See http://stackoverflow.com/questions/2898740/iphone-safari-web-app-opens-links-in-new-window
     */
-    if(window.navigator.standalone && isLink && target.getAttribute("href")) {
+    if(standAlone) {
       window.location = target.getAttribute("href");
     }
 
@@ -93,7 +93,7 @@
     }
     
     return null;  // not found
-  }
+  };
 
   /*
       All the events we care about bubble up to document,
