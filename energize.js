@@ -83,6 +83,11 @@
     }, 150);
   };
 
+  /*
+   * Find the closest parent tag of a given node.
+   * @param {HTMLElement} node current node to start searching from.
+   * @param {string} tagName the (uppercase) name of the tag you're looking for.
+   */
   var closest = function(node, tagName){
     var curNode = node;
 
