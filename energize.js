@@ -83,9 +83,8 @@
     }, 150);
   };
 
-  var closest = function(node, nodeName){
-    var curNode = node,
-        tagName = nodeName.toUpperCase();
+  var closest = function(node, tagName){
+    var curNode = node;
 
     while(curNode !== document.body) {  // go up the dom until we find the tag we're after
       if(!curNode || curNode.nodeName === tagName) { return curNode; } // found
