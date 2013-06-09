@@ -134,13 +134,16 @@
 
   /**
    * closest
+   * @param {HTMLElement} node current node to start searching from.
+   * @param {string} tagName the (uppercase) name of the tag you're looking for.
+   *
+   * Find the closest ancestor tag of a given node.
    *
    * Starts at node and goes up the DOM tree looking for a
    * matching nodeName, continuing until hitting document.body
    */
-  closest = function(node, nodeName){
-    var curNode = node,
-        tagName = nodeName.toUpperCase();
+  closest = function(node, tagName){
+    var curNode = node;
 
     while(curNode !== document.body) {  // go up the dom until we find the tag we're after
       if(!curNode || curNode.nodeName === tagName) { return curNode; } // found
