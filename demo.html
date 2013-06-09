@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<style>
+html,body, #container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+</style>
+</head>
+
+<body>
+
+<div id="container"></div>
+
+
+
+<script>
+
+(function(){
+
+var touchstartTime;
+
+var pageContents = '<h1>Click anywhere</h1>';
+if(window.location.search.indexOf('energizeractive') !== -1) {
+  pageContents += '<h2>(energize.js is <a href="?">ACTIVE</a>)</h2>';
+  var script = document.createElement('script');
+  script.src = 'energize.js';
+  document.body.appendChild(script);
+} else {
+  pageContents += '<h2>(energize.js is <a href="?energizeractive">INACTIVE)</a></h2>';
+}
+pageContents += '<div id="stats"></div>';
+document.getElementById('container').innerHTML = pageContents;
+
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+document.getElementById('container').addEventListener('click', function(e){
+  document.body.setAttribute('style', 'background-color: ' + colors[Math.floor(Math.random() * colors.length)]);
+  document.getElementById('stats').innerHTML = 'Click took ' + (Date.now() - touchstartTime) + 'ms';
+  touchstartTime = 0;
+}, false);
+
+document.getElementById('container').addEventListener('touchstart', function(e){
+  touchstartTime = Date.now();
+}, false);
+
+
+})();
+</script>
+</body>
+
+</html>
