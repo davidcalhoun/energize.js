@@ -1,5 +1,5 @@
 /**
- * energize.js
+ * energize.js v0.1.0
  *
  * Speeds up click events on mobile devices.
  * https://github.com/davidcalhoun/energize.js
