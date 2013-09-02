@@ -1,8 +1,9 @@
 /**
- * energize.js v0.1.1
+ * energize.js v0.1.2
  *
  * Speeds up click events on mobile devices.
- * https://github.com/davidcalhoun/energize.js
+ * master: https://github.com/davidcalhoun/energize.js
+ * fork: https://github.com/teusinkorg/energize.js
  */
 
 (function () { // Sandbox
@@ -64,7 +65,7 @@
 	 */
 	touchend = function (e) {
 		// Don't fire a click if it is an audio or video element
-		if (e.target.nodeName === 'VIDEO' || e.target.nodeName === 'AUDIO') {
+		if (e.target.nodeName === 'VIDEO' || e.target.nodeName === 'AUDIO' || e.target.nodeName === 'A') {
 			return;
 		}
 		// Don't fire a click if the user scrolled past the threshold
